@@ -57,11 +57,9 @@ export default {
       if (localStorage.user_list){
         this.personal_data = JSON.parse(localStorage.getItem('user_list'))
       }
-      console.log(this.personal_data)
     },
     saveValue: function (evt, field) {
       this.personal_data[this.user_id - 1][field] = evt.target.innerText;
-      console.log(this.personal_data[this.user_id-1])
     },
     getPersonalData: function () {
       this.modal_is_opened = false;
